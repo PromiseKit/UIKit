@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6304D6FE1D5F986A00CE6C99 /* PMKUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6304D6FD1D5F986A00CE6C99 /* PMKUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		630B2E161D5D0B3200DC10E9 /* TestUIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B2DF71D5D0AD400DC10E9 /* TestUIImagePickerController.swift */; };
+		6332142B1D83CD17009F67CE /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332142A1D83CD17009F67CE /* TestUIView.swift */; };
 		637E2C7D1D5C2E0B0043E370 /* PMKAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C701D5C2E0B0043E370 /* PMKAlertController.swift */; };
 		637E2C841D5C2E0B0043E370 /* UIView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 637E2C771D5C2E0B0043E370 /* UIView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		637E2C851D5C2E0B0043E370 /* UIView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C781D5C2E0B0043E370 /* UIView+AnyPromise.m */; };
@@ -78,6 +79,7 @@
 		630B2DF51D5D0AD400DC10E9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "UITests/Default-568h@2x.png"; sourceTree = "<group>"; };
 		630B2DF71D5D0AD400DC10E9 /* TestUIImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUIImagePickerController.swift; path = UITests/TestUIImagePickerController.swift; sourceTree = "<group>"; };
 		630B2E131D5D0AF500DC10E9 /* PMKUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMKUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6332142A1D83CD17009F67CE /* TestUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUIView.swift; path = Tests/TestUIView.swift; sourceTree = SOURCE_ROOT; };
 		637E2C701D5C2E0B0043E370 /* PMKAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PMKAlertController.swift; path = Sources/PMKAlertController.swift; sourceTree = SOURCE_ROOT; };
 		637E2C771D5C2E0B0043E370 /* UIView+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Sources/UIView+AnyPromise.h"; sourceTree = SOURCE_ROOT; };
 		637E2C781D5C2E0B0043E370 /* UIView+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Sources/UIView+AnyPromise.m"; sourceTree = SOURCE_ROOT; };
@@ -187,11 +189,12 @@
 				637E2C8E1D5C2E720043E370 /* TestUIImagePickerController.swift */,
 				637E2C8F1D5C2E720043E370 /* TestUIViewController.m */,
 				637E2C901D5C2E720043E370 /* TestUIViewController.swift */,
+				6332142A1D83CD17009F67CE /* TestUIView.swift */,
 				637E2C9A1D5C2F600043E370 /* infrastructure.swift */,
 			);
 			name = Tests;
 			path = PMKTests/NS;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -406,6 +409,7 @@
 				637E2C971D5C2E720043E370 /* TestUIViewController.swift in Sources */,
 				637E2C961D5C2E720043E370 /* TestUIViewController.m in Sources */,
 				637E2C9B1D5C2F600043E370 /* infrastructure.swift in Sources */,
+				6332142B1D83CD17009F67CE /* TestUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
