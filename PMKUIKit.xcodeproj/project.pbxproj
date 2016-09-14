@@ -21,6 +21,7 @@
 		637E2C961D5C2E720043E370 /* TestUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C8F1D5C2E720043E370 /* TestUIViewController.m */; };
 		637E2C971D5C2E720043E370 /* TestUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C901D5C2E720043E370 /* TestUIViewController.swift */; };
 		637E2C9B1D5C2F600043E370 /* infrastructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C9A1D5C2F600043E370 /* infrastructure.swift */; };
+		63A686811D88E93300D1C66B /* UIImagePickerController+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A6867E1D88E93300D1C66B /* UIImagePickerController+Promise.swift */; };
 		63C7FFF71D5C020D003BAE60 /* PMKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7FFA71D5BEE09003BAE60 /* PMKUIKit.framework */; };
 		63C9C4571D5D339900101ECE /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B2DF41D5D0AD400DC10E9 /* app.swift */; };
 		63C9C4581D5D339B00101ECE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 630B2DF51D5D0AD400DC10E9 /* Default-568h@2x.png */; };
@@ -91,6 +92,7 @@
 		637E2C8F1D5C2E720043E370 /* TestUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestUIViewController.m; path = Tests/TestUIViewController.m; sourceTree = SOURCE_ROOT; };
 		637E2C901D5C2E720043E370 /* TestUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUIViewController.swift; path = Tests/TestUIViewController.swift; sourceTree = SOURCE_ROOT; };
 		637E2C9A1D5C2F600043E370 /* infrastructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = infrastructure.swift; path = Tests/infrastructure.swift; sourceTree = SOURCE_ROOT; };
+		63A6867E1D88E93300D1C66B /* UIImagePickerController+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImagePickerController+Promise.swift"; path = "Sources/UIImagePickerController+Promise.swift"; sourceTree = SOURCE_ROOT; };
 		63C700091D5C0253003BAE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C7FFA71D5BEE09003BAE60 /* PMKUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C7FFF21D5C020D003BAE60 /* PMKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 				637E2C7A1D5C2E0B0043E370 /* UIViewController+AnyPromise.h */,
 				637E2C7B1D5C2E0B0043E370 /* UIViewController+AnyPromise.m */,
 				637E2C7C1D5C2E0B0043E370 /* UIViewController+Promise.swift */,
+				63A6867E1D88E93300D1C66B /* UIImagePickerController+Promise.swift */,
 			);
 			name = Sources;
 			path = "PMK+UIKit";
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A686811D88E93300D1C66B /* UIImagePickerController+Promise.swift in Sources */,
 				637E2C7D1D5C2E0B0043E370 /* PMKAlertController.swift in Sources */,
 				637E2C861D5C2E0B0043E370 /* UIView+Promise.swift in Sources */,
 				637E2C891D5C2E0B0043E370 /* UIViewController+Promise.swift in Sources */,
