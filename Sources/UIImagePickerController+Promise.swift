@@ -30,7 +30,7 @@ extension UIViewController {
             if let img = info[UIImagePickerControllerOriginalImage] as? UIImage {
                 return img
             }
-            throw Error.noImageFound
+            throw PMKError.noImageFound
         }.always {
             vc.presentingViewController?.dismiss(animated: animated, completion: nil)
         }
@@ -63,14 +63,14 @@ extension UIViewController {
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        reject(UIImagePickerController.Error.cancelled)
+        reject(UIImagePickerController.PMKError.cancelled)
         retainCycle = nil
     }
 }
 
 extension UIImagePickerController {
     /// Errors representing PromiseKit UIImagePickerController failures
-    public enum Error: CancellableError {
+    public enum PMKError: CancellableError {
         /// The user cancelled the UIImagePickerController.
         case cancelled
         /// - Returns: true

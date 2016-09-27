@@ -21,7 +21,7 @@ import PromiseKit
 */
 extension UIViewController {
 
-    public enum Error: Swift.Error {
+    public enum PMKError: Error {
         case navigationControllerEmpty
         case noImageFound
         case notPromisable
@@ -43,7 +43,7 @@ extension UIViewController {
 
         switch vc {
         case let nc as UINavigationController:
-            guard let vc = nc.viewControllers.first else { return Promise(error: Error.navigationControllerEmpty) }
+            guard let vc = nc.viewControllers.first else { return Promise(error: PMKError.navigationControllerEmpty) }
             pvc = vc
         default:
             pvc = vc
@@ -52,13 +52,13 @@ extension UIViewController {
         let promise: Promise<T>
 
         if !(pvc is Promisable) {
-            promise = Promise(error: Error.notPromisable)
+            promise = Promise(error: PMKError.notPromisable)
         } else if let p = pvc.value(forKeyPath: "promise") as? Promise<T> {
             promise = p
         } else if let _ = pvc.value(forKeyPath: "promise") {
-            promise = Promise(error: Error.notGenericallyPromisable)
+            promise = Promise(error: PMKError.notGenericallyPromisable)
         } else {
-            promise = Promise(error: Error.nilPromisable)
+            promise = Promise(error: PMKError.nilPromisable)
         }
 
         if !promise.isPending {
