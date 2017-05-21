@@ -13,7 +13,9 @@
 + (instancetype)delegateWithPromise:(AnyPromise **)promise;
 @end
 
-
+@interface UIViewController ()
+- (AnyPromise*) promise;
+@end
 
 @implementation UIViewController (PromiseKit)
 
