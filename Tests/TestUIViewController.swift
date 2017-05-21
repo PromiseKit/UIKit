@@ -93,7 +93,7 @@ private class MockViewController: UIViewController, Promisable {
 
     var appeared = false
 
-    private override func viewDidAppear(_ animated: Bool) {
+    fileprivate override func viewDidAppear(_ animated: Bool) {
         appeared = true
     }
 }
