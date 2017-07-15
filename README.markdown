@@ -2,13 +2,17 @@
 
 This project adds promises to Apple’s UIKit framework.
 
-## CococaPods
+This project supports Swift 3.0, 3.1, 3.2 and 4.0; iOS 9, 10 and 11; tvOS 10 and
+11; CocoaPods and Carthage; Xcode 8.0, 8.1, 8.2, 8.3 and 9.0.
+
+## CocoaPods
 
 ```ruby
 pod "PromiseKit/UIKit" ~> 4.0
 ```
 
-The extensions are built into `PromiseKit.framework` thus nothing else is needed.
+The extensions are built into `PromiseKit.framework` thus `import PromiseKit` is
+all that is needed.
 
 ## Carthage
 

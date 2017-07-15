@@ -1,20 +1,33 @@
+os: osx
 language: objective-c
-osx_image: xcode8
+matrix:
+  include:                                                                                        
+    - {osx_image: xcode9,   env: 'Sw=4.0 Pt=iOS  Dn="OS=10.3.1,name=iPhone SE"'}
+    - {osx_image: xcode9,   env: 'Sw=4.0 Pt=iOS  Dn="OS=11.0,name=iPhone SE"'}
+    - {osx_image: xcode9,   env: 'Sw=4.0 Pt=tvOS Dn="OS=10.2,name=Apple TV 1080p"'}
+    - {osx_image: xcode9,   env: 'Sw=4.0 Pt=tvOS Dn="OS=11.0,name=Apple TV 1080p"'}
 
-env:
-  - PLATFORM=iOS NAME='iPhone SE'
-  - PLATFORM=tvOS NAME='Apple TV 1080p'
+    - {osx_image: xcode9,   env: 'Sw=3.2 Pt=iOS  Dn="OS=10.3.1,name=iPhone SE"'}
+    - {osx_image: xcode9,   env: 'Sw=3.2 Pt=iOS  Dn="OS=11.0,name=iPhone SE"'}
+    - {osx_image: xcode9,   env: 'Sw=3.2 Pt=tvOS Dn="OS=10.2,name=Apple TV 1080p"'}
+    - {osx_image: xcode9,   env: 'Sw=3.2 Pt=tvOS Dn="OS=11.0,name=Apple TV 1080p"'}
 
-before_install:
-  - if [ -n "$NAME" ]; then
-      export UUID=$(instruments -s | ruby -e "ARGF.each_line{ |ln| ln =~ /$NAME .* \[(.*)\]/; if \$1; puts(\$1); exit; end }");
-    fi
+    - {osx_image: xcode8.3, env: 'Sw=3.1 Pt=iOS  Dn="OS=10.3.1,name=iPhone SE"'}
+    - {osx_image: xcode8.3, env: 'Sw=3.1 Pt=iOS  Dn="OS=9.0,name=iPhone 6"'}
+    - {osx_image: xcode8.3, env: 'Sw=3.1 Pt=iOS  Dn="OS=8.1,name=iPhone 4S"'}
+    - {osx_image: xcode8.3, env: 'Sw=3.1 Pt=tvOS Dn="OS=10.2,name=Apple TV 1080p"'}  
+    - {osx_image: xcode8.3, env: 'Sw=3.1 Pt=tvOS Dn="OS=9.0,name=Apple TV 1080p"'}  
+
+    - {osx_image: xcode8.2, env: 'Sw=3.0 Pt=iOS  Dn="OS=10.2,name=iPhone SE"'}
+    - {osx_image: xcode8.2, env: 'Sw=3.0 Pt=tvOS Dn="OS=10.1,name=Apple TV 1080p"'}
+
+    - {osx_image: xcode8.1, env: 'Sw=3.0 Pt=iOS  Dn="OS=10.1,name=iPhone SE"'}
+    - {osx_image: xcode8.1, env: 'Sw=3.0 Pt=tvOS Dn="OS=10.0,name=Apple TV 1080p"'}
+
+    - {osx_image: xcode8,   env: 'Sw=3.0 Pt=iOS  Dn="OS=10.0,name=iPhone SE"'}
+    - {osx_image: xcode8,   env: 'Sw=3.0 Pt=tvOS Dn="OS=10.0,name=Apple TV 1080p"'}
 
 install:
-  - carthage bootstrap --platform $PLATFORM
-
+  - carthage bootstrap --platform $Pt
 script:
-  - set -o pipefail;
-    xcrun instruments -w "$UUID";
-    sleep 15;
-    xcodebuild -scheme PMKUIKit -destination "id=$UUID" test | xcpretty
+  - xcodebuild -scheme PMKUIKit -quiet -destination "$Dn" build SWIFT_VERSION="$Sw"
