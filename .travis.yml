@@ -1,13 +1,35 @@
+os: osx
 language: objective-c
-osx_image: xcode8.3
-env:
-  - PLATFORM=iOS NAME='iPhone SE'
-  - PLATFORM=tvOS NAME='Apple TV 1080p'
+matrix:
+  include:
+    - osx_image: xcode8.2
+      env: PLAT=iOS SWFT=3.0
+    - osx_image: xcode8.2
+      env: PLAT=tvOS SWFT=3.0
+    - osx_image: xcode8.3
+      env: PLAT=iOS SWFT=3.1
+    - osx_image: xcode8.3
+      env: PLAT=tvOS SWFT=3.1
+    - osx_image: xcode9
+      env: PLAT=iOS SWFT=3.2
+    - osx_image: xcode9
+      env: PLAT=tvOS SWFT=3.2
+    - osx_image: xcode9
+      env: PLAT=iOS SWFT=4.0
+    - osx_image: xcode9
+      env: PLAT=tvOS SWFT=4.0
 before_install:
-  - export UUID=$(instruments -s | ruby -e "ARGF.each_line{ |ln| ln =~ /$NAME .* \[(.*)\]/; if \$1; puts(\$1); exit; end }");
+  - case $PLAT in
+    iOS)
+      NAME="iPhone SE";;
+    tvOS)
+      NAME="Apple TV 1080p";;
+    esac
+  - export UUID=$(instruments -s | ruby -e "ARGF.each_line{ |ln| ln =~ /$NAME .* \[(.*)\]/; if \$1; puts(\$1); exit; end }")
 install:
-  - carthage bootstrap --platform $PLATFORM
+  - carthage bootstrap --platform $PLAT
 script:
-  - set -o pipefail;
-    open -a "simulator" --args -CurrentDeviceUDID "$UUID";
-    xcodebuild -scheme PMKUIKit -destination "id=$UUID" test | xcpretty
+  - set -o pipefail
+  - open -b com.apple.iphonesimulator --args -CurrentDeviceUDID "$UUID"
+  - xcodebuild -scheme PMKUIKit -destination "id=$UUID" -quiet clean build SWIFT_VERSION=$SWFT
+  - xcodebuild -scheme PMKUIKit -destination "id=$UUID" -quiet test

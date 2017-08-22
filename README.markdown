@@ -2,7 +2,9 @@
 
 This project adds promises to Apple’s UIKit framework.
 
-## CococaPods
+This project supports Swift 3.1, 3.2 and 4.0.
+
+## CocoaPods
 
 ```ruby
 pod "PromiseKit/UIKit" ~> 4.0
