@@ -8,9 +8,9 @@ class UIViewTests: XCTestCase {
         let ex1 = expectation(description: "")
         let ex2 = expectation(description: "")
 
-        UIView.promise(animateWithDuration: 0.1) {
+        UIView.animate(.promise, duration: 0.1) {
             ex1.fulfill()
-        }.then { _ -> Void in
+        }.done { _ in
             ex2.fulfill()
         }
 

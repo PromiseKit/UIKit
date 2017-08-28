@@ -21,12 +21,6 @@ matrix:
     - {osx_image: xcode8.2, env: 'Sw=3.0 Pt=iOS  Dn="OS=10.2,name=iPhone SE"'}
     - {osx_image: xcode8.2, env: 'Sw=3.0 Pt=tvOS Dn="OS=10.1,name=Apple TV 1080p"'}
 
-    - {osx_image: xcode8.1, env: 'Sw=3.0 Pt=iOS  Dn="OS=10.1,name=iPhone SE"'}
-    - {osx_image: xcode8.1, env: 'Sw=3.0 Pt=tvOS Dn="OS=10.0,name=Apple TV 1080p"'}
-
-    - {osx_image: xcode8,   env: 'Sw=3.0 Pt=iOS  Dn="OS=10.0,name=iPhone SE"'}
-    - {osx_image: xcode8,   env: 'Sw=3.0 Pt=tvOS Dn="OS=10.0,name=Apple TV 1080p"'}
-
 install:
   - carthage bootstrap --platform $Pt
 script:

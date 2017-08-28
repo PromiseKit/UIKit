@@ -10,16 +10,13 @@
 		6304D6FE1D5F986A00CE6C99 /* PMKUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6304D6FD1D5F986A00CE6C99 /* PMKUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		630B2E161D5D0B3200DC10E9 /* TestUIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B2DF71D5D0AD400DC10E9 /* TestUIImagePickerController.swift */; };
 		6332142B1D83CD17009F67CE /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332142A1D83CD17009F67CE /* TestUIView.swift */; };
-		637E2C7D1D5C2E0B0043E370 /* PMKAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C701D5C2E0B0043E370 /* PMKAlertController.swift */; };
 		637E2C841D5C2E0B0043E370 /* UIView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 637E2C771D5C2E0B0043E370 /* UIView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		637E2C851D5C2E0B0043E370 /* UIView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C781D5C2E0B0043E370 /* UIView+AnyPromise.m */; };
 		637E2C861D5C2E0B0043E370 /* UIView+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C791D5C2E0B0043E370 /* UIView+Promise.swift */; };
 		637E2C871D5C2E0B0043E370 /* UIViewController+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 637E2C7A1D5C2E0B0043E370 /* UIViewController+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		637E2C881D5C2E0B0043E370 /* UIViewController+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C7B1D5C2E0B0043E370 /* UIViewController+AnyPromise.m */; };
-		637E2C891D5C2E0B0043E370 /* UIViewController+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C7C1D5C2E0B0043E370 /* UIViewController+Promise.swift */; };
 		637E2C951D5C2E720043E370 /* TestUIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C8E1D5C2E720043E370 /* TestUIImagePickerController.swift */; };
 		637E2C961D5C2E720043E370 /* TestUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C8F1D5C2E720043E370 /* TestUIViewController.m */; };
-		637E2C971D5C2E720043E370 /* TestUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C901D5C2E720043E370 /* TestUIViewController.swift */; };
 		637E2C9B1D5C2F600043E370 /* infrastructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C9A1D5C2F600043E370 /* infrastructure.swift */; };
 		63A686811D88E93300D1C66B /* UIImagePickerController+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A6867E1D88E93300D1C66B /* UIImagePickerController+Promise.swift */; };
 		63C7FFF71D5C020D003BAE60 /* PMKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7FFA71D5BEE09003BAE60 /* PMKUIKit.framework */; };
@@ -81,16 +78,13 @@
 		630B2DF71D5D0AD400DC10E9 /* TestUIImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUIImagePickerController.swift; path = UITests/TestUIImagePickerController.swift; sourceTree = "<group>"; };
 		630B2E131D5D0AF500DC10E9 /* PMKUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMKUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6332142A1D83CD17009F67CE /* TestUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUIView.swift; path = Tests/TestUIView.swift; sourceTree = SOURCE_ROOT; };
-		637E2C701D5C2E0B0043E370 /* PMKAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PMKAlertController.swift; path = Sources/PMKAlertController.swift; sourceTree = SOURCE_ROOT; };
 		637E2C771D5C2E0B0043E370 /* UIView+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Sources/UIView+AnyPromise.h"; sourceTree = SOURCE_ROOT; };
 		637E2C781D5C2E0B0043E370 /* UIView+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Sources/UIView+AnyPromise.m"; sourceTree = SOURCE_ROOT; };
 		637E2C791D5C2E0B0043E370 /* UIView+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Promise.swift"; path = "Sources/UIView+Promise.swift"; sourceTree = SOURCE_ROOT; };
 		637E2C7A1D5C2E0B0043E370 /* UIViewController+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AnyPromise.h"; path = "Sources/UIViewController+AnyPromise.h"; sourceTree = SOURCE_ROOT; };
 		637E2C7B1D5C2E0B0043E370 /* UIViewController+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AnyPromise.m"; path = "Sources/UIViewController+AnyPromise.m"; sourceTree = SOURCE_ROOT; };
-		637E2C7C1D5C2E0B0043E370 /* UIViewController+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Promise.swift"; path = "Sources/UIViewController+Promise.swift"; sourceTree = SOURCE_ROOT; };
 		637E2C8E1D5C2E720043E370 /* TestUIImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUIImagePickerController.swift; path = Tests/TestUIImagePickerController.swift; sourceTree = SOURCE_ROOT; };
 		637E2C8F1D5C2E720043E370 /* TestUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestUIViewController.m; path = Tests/TestUIViewController.m; sourceTree = SOURCE_ROOT; };
-		637E2C901D5C2E720043E370 /* TestUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUIViewController.swift; path = Tests/TestUIViewController.swift; sourceTree = SOURCE_ROOT; };
 		637E2C9A1D5C2F600043E370 /* infrastructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = infrastructure.swift; path = Tests/infrastructure.swift; sourceTree = SOURCE_ROOT; };
 		63A6867E1D88E93300D1C66B /* UIImagePickerController+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImagePickerController+Promise.swift"; path = "Sources/UIImagePickerController+Promise.swift"; sourceTree = SOURCE_ROOT; };
 		63C700091D5C0253003BAE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,13 +167,11 @@
 			isa = PBXGroup;
 			children = (
 				6304D6FD1D5F986A00CE6C99 /* PMKUIKit.h */,
-				637E2C701D5C2E0B0043E370 /* PMKAlertController.swift */,
 				637E2C771D5C2E0B0043E370 /* UIView+AnyPromise.h */,
 				637E2C781D5C2E0B0043E370 /* UIView+AnyPromise.m */,
 				637E2C791D5C2E0B0043E370 /* UIView+Promise.swift */,
 				637E2C7A1D5C2E0B0043E370 /* UIViewController+AnyPromise.h */,
 				637E2C7B1D5C2E0B0043E370 /* UIViewController+AnyPromise.m */,
-				637E2C7C1D5C2E0B0043E370 /* UIViewController+Promise.swift */,
 				63A6867E1D88E93300D1C66B /* UIImagePickerController+Promise.swift */,
 			);
 			path = Sources;
@@ -190,7 +182,6 @@
 			children = (
 				637E2C8E1D5C2E720043E370 /* TestUIImagePickerController.swift */,
 				637E2C8F1D5C2E720043E370 /* TestUIViewController.m */,
-				637E2C901D5C2E720043E370 /* TestUIViewController.swift */,
 				6332142A1D83CD17009F67CE /* TestUIView.swift */,
 				637E2C9A1D5C2F600043E370 /* infrastructure.swift */,
 			);
@@ -397,9 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63A686811D88E93300D1C66B /* UIImagePickerController+Promise.swift in Sources */,
-				637E2C7D1D5C2E0B0043E370 /* PMKAlertController.swift in Sources */,
 				637E2C861D5C2E0B0043E370 /* UIView+Promise.swift in Sources */,
-				637E2C891D5C2E0B0043E370 /* UIViewController+Promise.swift in Sources */,
 				637E2C851D5C2E0B0043E370 /* UIView+AnyPromise.m in Sources */,
 				637E2C881D5C2E0B0043E370 /* UIViewController+AnyPromise.m in Sources */,
 			);
@@ -410,7 +399,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				637E2C951D5C2E720043E370 /* TestUIImagePickerController.swift in Sources */,
-				637E2C971D5C2E720043E370 /* TestUIViewController.swift in Sources */,
 				637E2C961D5C2E720043E370 /* TestUIViewController.m in Sources */,
 				637E2C9B1D5C2F600043E370 /* infrastructure.swift in Sources */,
 				6332142B1D83CD17009F67CE /* TestUIView.swift in Sources */,
