@@ -47,7 +47,7 @@ class App: UITableViewController, UIApplicationDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch Row(indexPath)! {
         case .ImagePickerCancel:
-            let p: Promise<UIImage> = promise(UIImagePickerController())
+            let p = promise(UIImagePickerController())
             p.catch(policy: .allErrors) { error in
                 guard (error as! CancellableError).isCancelled else { abort() }
                 self.success()
@@ -58,11 +58,11 @@ class App: UITableViewController, UIApplicationDelegate {
         case .ImagePickerEditImage:
             let picker = UIImagePickerController()
             picker.allowsEditing = true
-            _ = promise(picker).then { (img: UIImage) in
+            _ = promise(picker).done { _ in
                 self.success()
             }
         case .ImagePickerPickImage:
-            _ = promise(UIImagePickerController()).then { (image: UIImage) in
+            _ = promise(UIImagePickerController()).done { image in
                 self.success()
             }
         }

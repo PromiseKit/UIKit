@@ -1,5 +1,5 @@
 import UIKit.UIView
-#if !COCOAPODS
+#if !PMKCocoaPods
 import PromiseKit
 #endif
 
@@ -40,7 +40,11 @@ extension UIView {
      - Returns: A promise that fulfills with a boolean NSNumber indicating
      whether or not the animations actually finished.
     */
-    public class func promise(animateWithDuration duration: TimeInterval, delay: TimeInterval = 0, options: UIViewAnimationOptions = [], animations: @escaping () -> Void) -> Promise<Bool> {
-        return PromiseKit.wrap { animate(withDuration: duration, delay: delay, options: options, animations: animations, completion: $0) }
+    public class func animate(_: PMKNamespacer, duration: TimeInterval, delay: TimeInterval = 0, options: UIViewAnimationOptions = [], animations: @escaping () -> Void) -> Guarantee<Bool> {
+        return Guarantee(.pending) { animate(withDuration: duration, delay: delay, options: options, animations: animations, completion: $0) }
+    }
+
+    public class func animate(_: PMKNamespacer, duration: TimeInterval, delay: TimeInterval, usingSpringWithDamping damping: CGFloat, initialSpringVelocity: CGFloat, options: UIViewAnimationOptions = [], animations: @escaping () -> Void) -> Guarantee<Bool> {
+        return Guarantee(.pending) { animate(withDuration: duration, delay: delay, usingSpringWithDamping: damping, initialSpringVelocity: initialSpringVelocity, options: options, animations: animations, completion: $0) }
     }
 }
