@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6304D6FE1D5F986A00CE6C99 /* PMKUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6304D6FD1D5F986A00CE6C99 /* PMKUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		630B2E161D5D0B3200DC10E9 /* TestUIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B2DF71D5D0AD400DC10E9 /* TestUIImagePickerController.swift */; };
+		632B573520324C4C00FCD5E1 /* UIViewPropertyAnimator+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632B573420324C4C00FCD5E1 /* UIViewPropertyAnimator+Promise.swift */; };
 		6332142B1D83CD17009F67CE /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332142A1D83CD17009F67CE /* TestUIView.swift */; };
 		637E2C841D5C2E0B0043E370 /* UIView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 637E2C771D5C2E0B0043E370 /* UIView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		637E2C851D5C2E0B0043E370 /* UIView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E2C781D5C2E0B0043E370 /* UIView+AnyPromise.m */; };
@@ -77,6 +78,7 @@
 		630B2DF51D5D0AD400DC10E9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "UITests/Default-568h@2x.png"; sourceTree = "<group>"; };
 		630B2DF71D5D0AD400DC10E9 /* TestUIImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUIImagePickerController.swift; path = UITests/TestUIImagePickerController.swift; sourceTree = "<group>"; };
 		630B2E131D5D0AF500DC10E9 /* PMKUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMKUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		632B573420324C4C00FCD5E1 /* UIViewPropertyAnimator+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewPropertyAnimator+Promise.swift"; sourceTree = "<group>"; };
 		6332142A1D83CD17009F67CE /* TestUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestUIView.swift; path = Tests/TestUIView.swift; sourceTree = SOURCE_ROOT; };
 		637E2C771D5C2E0B0043E370 /* UIView+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Sources/UIView+AnyPromise.h"; sourceTree = SOURCE_ROOT; };
 		637E2C781D5C2E0B0043E370 /* UIView+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Sources/UIView+AnyPromise.m"; sourceTree = SOURCE_ROOT; };
@@ -173,6 +175,7 @@
 				637E2C7A1D5C2E0B0043E370 /* UIViewController+AnyPromise.h */,
 				637E2C7B1D5C2E0B0043E370 /* UIViewController+AnyPromise.m */,
 				63A6867E1D88E93300D1C66B /* UIImagePickerController+Promise.swift */,
+				632B573420324C4C00FCD5E1 /* UIViewPropertyAnimator+Promise.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -390,6 +393,7 @@
 				63A686811D88E93300D1C66B /* UIImagePickerController+Promise.swift in Sources */,
 				637E2C861D5C2E0B0043E370 /* UIView+Promise.swift in Sources */,
 				637E2C851D5C2E0B0043E370 /* UIView+AnyPromise.m in Sources */,
+				632B573520324C4C00FCD5E1 /* UIViewPropertyAnimator+Promise.swift in Sources */,
 				637E2C881D5C2E0B0043E370 /* UIViewController+AnyPromise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
