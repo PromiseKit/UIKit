@@ -131,7 +131,7 @@
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    resolve([NSError cancelledError]);
+    resolve([NSError errorWithDomain:NSCocoaErrorDomain code:NSUserCancelledError userInfo:nil]);
     retainCycle = nil;
 }
 
