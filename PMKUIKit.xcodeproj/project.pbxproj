@@ -25,6 +25,7 @@
 		63C9C4581D5D339B00101ECE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 630B2DF51D5D0AD400DC10E9 /* Default-568h@2x.png */; };
 		63C9C45E1D5D341600101ECE /* PMKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7FFA71D5BEE09003BAE60 /* PMKUIKit.framework */; };
 		63C9C45F1D5D341600101ECE /* PMKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7FFA71D5BEE09003BAE60 /* PMKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		911E6FC620F571F7006F49B9 /* TestUIViewPropertyAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E6FC520F571F7006F49B9 /* TestUIViewPropertyAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		63C9C4451D5D334700101ECE /* PMKTestsHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMKTestsHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CCF8121D5C0C4E00503216 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		63CCF8171D5C11B500503216 /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
+		911E6FC520F571F7006F49B9 /* TestUIViewPropertyAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUIViewPropertyAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				637E2C8E1D5C2E720043E370 /* TestUIImagePickerController.swift */,
 				637E2C8F1D5C2E720043E370 /* TestUIViewController.m */,
 				6332142A1D83CD17009F67CE /* TestUIView.swift */,
+				911E6FC520F571F7006F49B9 /* TestUIViewPropertyAnimator.swift */,
 				637E2C9A1D5C2F600043E370 /* infrastructure.swift */,
 			);
 			path = Tests;
@@ -402,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911E6FC620F571F7006F49B9 /* TestUIViewPropertyAnimator.swift in Sources */,
 				637E2C951D5C2E720043E370 /* TestUIImagePickerController.swift in Sources */,
 				637E2C961D5C2E720043E370 /* TestUIViewController.m in Sources */,
 				637E2C9B1D5C2F600043E370 /* infrastructure.swift in Sources */,
