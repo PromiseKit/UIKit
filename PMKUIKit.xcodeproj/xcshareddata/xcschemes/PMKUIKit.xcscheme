@@ -68,6 +68,9 @@
                <Test
                   Identifier = "UIImagePickerControllerTests/test_fulfills_with_image()">
                </Test>
+               <Test
+                  Identifier = "UIImagePickerControllerTests/test_rejects_when_cancelled()">
+               </Test>
             </SkippedTests>
          </TestableReference>
       </Testables>

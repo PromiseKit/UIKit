@@ -19,6 +19,8 @@ class UIImagePickerControllerTests: XCTestCase {
     }
 
 #if !os(tvOS)
+    // this test works locally but not on travis
+    // attempting to detect Travis and early-return did not work
     func test_rejects_when_cancelled() {
         let app = XCUIApplication()
         let table = app.tables
