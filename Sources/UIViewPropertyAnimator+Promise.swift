@@ -5,6 +5,8 @@ import UIKit
 
 @available(iOS 10, tvOS 10, *)
 public extension UIViewPropertyAnimator {
+    /// - Note: cancelling this promise will cancel the underlying task
+    /// - SeeAlso: [Cancellation](http://promisekit.org/docs/)
     func startAnimation(_: PMKNamespacer) -> Guarantee<UIViewAnimatingPosition> {
         return Guarantee<UIViewAnimatingPosition>(cancellableTask: self) {
             addCompletion($0)
@@ -21,14 +23,5 @@ extension UIViewPropertyAnimator: CancellableTask {
     
     public var isCancelled: Bool {
         return (state == .inactive) && (fractionComplete < 1.0)
-    }
-}
-
-//////////////////////////////////////////////////////////// Cancellable wrapper
-
-@available(iOS 10, tvOS 10, *)
-extension UIViewPropertyAnimator {
-    public func cancellableStartAnimation(_: PMKNamespacer) -> CancellablePromise<UIViewAnimatingPosition> {
-        return cancellable(startAnimation(.promise))
     }
 }

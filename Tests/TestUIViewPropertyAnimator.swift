@@ -31,7 +31,7 @@ extension UIViewPropertyAnimatorTests {
         let animator = UIViewPropertyAnimator(duration: 0.1, curve: .easeIn, animations: { [weak self] in
             ex1.fulfill()
         })
-        let p = animator.cancellableStartAnimation(.promise).done { _ in
+        let p = cancellable(animator.startAnimation(.promise)).done { _ in
             XCTFail()
         }.catch(policy: .allErrors) { error in
             error.isCancelled ? ex2.fulfill() : XCTFail("Error: \(error)")
