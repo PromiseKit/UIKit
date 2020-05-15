@@ -5,10 +5,21 @@ import UIKit
 
 #if !os(tvOS)
 
+public struct AnimationOptions: OptionSet {
+    public let rawValue: Int
+
+    public static let appear     = AnimationOptions(rawValue: 1 << 1)
+    public static let disappear  = AnimationOptions(rawValue: 1 << 2)
+
+    public init(rawValue: Int) {
+        self.rawValue = rawValue
+    }
+}
+
 extension UIViewController {
 #if swift(>=4.2)
     /// Presents the UIImagePickerController, resolving with the user action.
-    public func promise(_ vc: UIImagePickerController, animate: PMKAnimationOptions = [.appear, .disappear], completion: (() -> Void)? = nil) -> Promise<[UIImagePickerController.InfoKey: Any]> {
+    public func promise(_ vc: UIImagePickerController, animate: AnimationOptions = [.appear, .disappear], completion: (() -> Void)? = nil) -> Promise<[UIImagePickerController.InfoKey: Any]> {
         let animated = animate.contains(.appear)
         let proxy = UIImagePickerControllerProxy()
         vc.delegate = proxy
@@ -19,7 +30,7 @@ extension UIViewController {
     }
 #else
     /// Presents the UIImagePickerController, resolving with the user action.
-    public func promise(_ vc: UIImagePickerController, animate: PMKAnimationOptions = [.appear, .disappear], completion: (() -> Void)? = nil) -> Promise<[String: Any]> {
+    public func promise(_ vc: UIImagePickerController, animate: AnimationOptions = [.appear, .disappear], completion: (() -> Void)? = nil) -> Promise<[String: Any]> {
         let animated = animate.contains(.appear)
         let proxy = UIImagePickerControllerProxy()
         vc.delegate = proxy
